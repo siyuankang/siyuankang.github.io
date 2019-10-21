@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo和markdown]]></title>
+    <url>%2F2019%2F07%2F18%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[插入图片的方法[先检查下你的node_modules/hexo-asset-image的index.js文件]12var beginPos = getPosition(link, '/', 3) + 1;改成后面的这句》》var beginPos = getPosition(link, '/', 1) + 1; 然后写Markdown1![这就是个图](hello-world/createApp.png) 下面是我自己搭的简单的棚 ↓↓↓↓ 放上别人的链接1[Server](https://hexo.io/docs/server.html) 举个栗子一颗大萝北]]></content>
+      <categories>
+        <category>搭建hexo遇到的问题</category>
+      </categories>
+      <tags>
+        <tag>认识hexo和markdown。</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Apicloud常用函数封装]]></title>
     <url>%2F2019%2F05%2F08%2FApicloud%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85%2F</url>
     <content type="text"><![CDATA[apicloud常用模块功能的封装封装模块功能是第一生产力 应用项目—-建筑机械 上传图片并显示缩略图 上推选择框模块selector封装。 ajax请求也要封装好，各种参数状态返回判断。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Javascript Day by day]]></title>
+    <url>%2F2019%2F03%2F27%2FJavascript%2F</url>
+    <content type="text"><![CDATA[关于jsjs。 高级前端js进阶 学习链接-&gt;前端时间格式的转换 2019-09-09T16:00:00.000Z123456789//转换时间格式，难免后端会传递些奇怪的东西，所以遇到了就记录下吧。`_`formateDate(datetime) &#123; function addDateZero(num) &#123; return (num &lt; 10 ? "0" + num : num); &#125; let d = new Date(datetime); let formatdatetime = d.getFullYear() + '-' + addDateZero(d.getMonth() + 1) + '-' + addDateZero(d.getDate()) + ' ' + addDateZero(d.getHours()) + ':' + addDateZero(d.getMinutes()) + ':' + addDateZero(d.getSeconds()); return formatdatetime;&#125; 从后端返回的富文本中把图片取出来123456789101112131415161718var reg = /\&lt;img[^\&gt;]*[\/]?\&gt;/ig;ret.content = ret.centent.replace(/&lt;[^&gt;]+&gt;/g, "");//取出富文本中得文字内容if(ret.length) &#123; for(var i=0;i&lt;ret.length;i++) &#123; var result = ret[i].centent.match(reg); if(result)&#123; ret[i].imgUrl = []; for (j = 0; j &lt; result.length; j++)&#123; result[j].replace( /src=(\"|\')?([^\"\&gt;]*)(\"|\')?( |&gt;|\/)/ig, function( $1,$2,$3,$4 )&#123; result[j] = $3; &#125;); &#125; ret[i].imgUrl = result; &#125; &#125; vm.news_list = ret; vm.offset += 10;&#125; 递归解决for循环中处理数组的问题问题描述：今天写项目的时候，遇到一个问题，简单来说吧，我需要把一个数组中的每个元素都转化一下，得到一个新的数组，转化是通过一个异步的方法来实现的（必须通过这种方法），于是第一个就想到了123456789101112var arr = [];for(var i=0; i&lt;data.length;i++)&#123; UIAlbumBrowser.transPath(&#123; path: data[i].path &#125;, function(ret, err) &#123; if (ret) &#123; arr.push(ret.path); &#125; &#125;); &#125;return arr; 但是上面这段代码得到的arr你会发现是[],以我这个菜鸟理解可能这个UIAlbumBrowser…的方法是个异步的函数所以根本得不到新的arr。我请教了同事，同事给我支了一招，确确实实解决了这个问题，在这里我是要感谢下他的。我们使用了递归。简单说就是自己调自己。如果我这次没能知道这个办法，那么下次我绝对不会熟练地敲出来。这就是我奉行的原则。123456789101112131415161718vm.curs(i);..curs: function(i,list)&#123; var UIAlbumBrowser = api.require('UIAlbumBrowser'); UIAlbumBrowser.transPath(&#123; path: list[i].path &#125;, function(ret, err) &#123; if (ret) &#123; vm.imgArr.push(ret.path); if(i == vm.imgLength - 1) &#123; vm.submitImg(vm.imgArr); &#125; vm.curs(i+1,list); &#125; &#125;); &#125;, 这样就得到了一个新的arr了，有个地方不明白，为什么 vm.curs(i+1,list);后面的代码只执行一次呢？ 闭包处理异步123456var p = [];for (var i = 0; i &lt; 5.length; i++) &#123; p[i] = (function(num)&#123; return num; &#125;)(i); &#125; 纯数组变成json字符串1234567var dynamicImg = [];for(var a = 0; a&lt;imgList.length; a++)&#123; var info = &#123;&#125;; info.src = imgList[a]; dynamicImg.push(info); &#125;console.log(dynamicImg); ajax传递数组参数的注意事项,这个问题耽误了我很多的时间，也得不出答案，真的是很烦很烦。12traditional：true 我从这个地方学习到的-&gt;]]></content>
+      <categories>
+        <category>JS</category>
+      </categories>
+      <tags>
+        <tag>Javascript</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[thinkphp5学习轨迹]]></title>
