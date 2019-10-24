@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.siykang.xyz/"/>
-  <updated>2019-10-21T06:04:03.490Z</updated>
+  <updated>2019-10-24T01:53:48.359Z</updated>
   <id>www.siykang.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="www.siykang.xyz/2019/07/18/hello-world/"/>
     <id>www.siykang.xyz/2019/07/18/hello-world/</id>
     <published>2019-07-18T06:22:15.788Z</published>
-    <updated>2019-10-21T06:04:03.490Z</updated>
+    <updated>2019-10-24T01:53:48.359Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="插入图片的方法-先检查下你的node-modules-hexo-asset-image的index-js文件"><a href="#插入图片的方法-先检查下你的node-modules-hexo-asset-image的index-js文件" class="headerlink" title="插入图片的方法[先检查下你的node_modules/hexo-asset-image的index.js文件]"></a>插入图片的方法[先检查下你的node_modules/hexo-asset-image的index.js文件]</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var beginPos = getPosition(link, <span class="string">'/'</span>, 3) + 1;改成后面的这句》》</span><br><span class="line">var beginPos = getPosition(link, <span class="string">'/'</span>, 1) + 1;</span><br></pre></td></tr></table></figure><p>然后写Markdown<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![这就是个图](hello-world/createApp.png)</span><br></pre></td></tr></table></figure></p><p><font color="#c0c0c0">下面是我自己搭的简单的棚  ↓↓↓↓</font><br><img src="/18/hello-world/createApp.png" alt="&lt;font color=#0099FF&gt;这就是个图&lt;/font&gt;"></p><h3 id="放上别人的链接"><a href="#放上别人的链接" class="headerlink" title="放上别人的链接"></a>放上别人的链接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Server](https://hexo.io/docs/server.html)</span><br></pre></td></tr></table></figure><h4 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a><font color="#c0c0c0">举个栗子</font></h4><p><a href="https://www.imoecg.com/" target="_blank" rel="noopener">一颗大萝北</a></p>]]></content>
     
@@ -42,13 +42,13 @@
   </entry>
   
   <entry>
-    <title>Apicloud常用函数封装</title>
+    <title>Apicloud技巧总结</title>
     <link href="www.siykang.xyz/2019/05/08/Apicloud%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85/"/>
     <id>www.siykang.xyz/2019/05/08/Apicloud常用函数封装/</id>
     <published>2019-05-08T07:33:19.000Z</published>
-    <updated>2019-05-08T07:38:21.055Z</updated>
+    <updated>2019-10-24T01:54:38.743Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="apicloud常用模块功能的封装"><a href="#apicloud常用模块功能的封装" class="headerlink" title="apicloud常用模块功能的封装"></a>apicloud常用模块功能的封装</h3><p>封装模块功能是第一生产力   应用项目—-建筑机械</p><ol><li>上传图片并显示缩略图</li><li>上推选择框模块selector封装。</li><li>ajax请求也要封装好，各种参数状态返回判断。</li></ol>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="苹果测试证书申请链接"><a href="#苹果测试证书申请链接" class="headerlink" title="苹果测试证书申请链接"></a>苹果测试证书申请链接</h3><p><a href="https://www.cnblogs.com/appuploader/p/11597818.html" target="_blank" rel="noopener">苹果测试证书申请</a></p><h3 id="apicloud常用模块功能的封装"><a href="#apicloud常用模块功能的封装" class="headerlink" title="apicloud常用模块功能的封装"></a>apicloud常用模块功能的封装</h3><p>封装模块功能是第一生产力   应用项目—-建筑机械</p><ol><li>上传图片并显示缩略图</li><li>上推选择框模块selector封装。</li><li>ajax请求也要封装好，各种参数状态返回判断。</li></ol>]]></content>
     
     <summary type="html">
     
