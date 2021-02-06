@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.siykang.xyz/"/>
-  <updated>2021-02-06T18:09:46.993Z</updated>
+  <updated>2021-02-06T18:22:54.523Z</updated>
   <id>www.siykang.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>再学前端</title>
+    <link href="www.siykang.xyz/2021/02/07/%E5%86%8D%E5%AD%A6%E5%89%8D%E7%AB%AF/"/>
+    <id>www.siykang.xyz/2021/02/07/再学前端/</id>
+    <published>2021-02-06T17:55:51.000Z</published>
+    <updated>2021-02-06T18:22:54.523Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="事件循环eventloop"><a href="#事件循环eventloop" class="headerlink" title="事件循环eventloop"></a>事件循环eventloop</h3><p><img src="/2021/02/07/再学前端/img/eventloop.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>hexo和markdown</title>
