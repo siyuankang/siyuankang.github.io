@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[post]]></title>
+    <url>%2F2021%2F02%2F07%2Fpost%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[hexo和markdown]]></title>
     <url>%2F2019%2F07%2F18%2Fhello-world%2F</url>
     <content type="text"><![CDATA[插入图片的方法[先检查下你的node_modules/hexo-asset-image的index.js文件]12var beginPos = getPosition(link, '/', 3) + 1;改成后面的这句》》var beginPos = getPosition(link, '/', 1) + 1; 然后写Markdown1![这就是个图](hello-world/createApp.png) 下面是我自己搭的简单的棚 ↓↓↓↓ 放上别人的链接1[Server](https://hexo.io/docs/server.html) 举个栗子一颗大萝北]]></content>
