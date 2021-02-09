@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[理解作用域(阅读【你不知道的JavaScript】书)]]></title>
+    <url>%2F2021%2F02%2F09%2F%E7%90%86%E8%A7%A3%E4%BD%9C%E7%94%A8%E5%9F%9F%2F</url>
+    <content type="text"><![CDATA[写在前面，这里的内容是我阅读书籍，根据书中的详细讲解，提出自己理解的地方，总结在这里，仅此目的而已，欢迎一起学习共勉。Thanks for [你不知道的JavaScript] 三个重要概念引擎，编译器，作用域 引擎：从头到尾负责整个 JavaScript 程序的编译及执行过程。 编译器：引擎的好朋友之一，负责语法分析及代码生成等脏活累活。 作用域：引擎的另一位好朋友，负责收集并维护由所有声明的标识符（变量）组成的一系列查 询，并实施一套非常严格的规则，确定当前执行的代码对这些标识符的访问权限。 当你看见 var a = 2; 这段程序时，很可能认为这是一句声明。但我们的新朋友引擎却不这 么看。事实上，引擎认为这里有两个完全不同的声明，一个由编译器在编译时处理，另一 个则由引擎在运行时处理。 总结：变量的赋值操作会执行两个动作，首先编译器会在当前作用域中声明一个变量（如 果之前没有声明过），然后在运行时引擎会在作用域中查找该变量，如果能够找到就会对 它赋值。 RHS查询和LHS查询console.log( a ); 其中对 a 的引用是一个 RHS 引用，因为这里 a 并没有赋予任何值。相应地，需要查找并取 得 a 的值，这样才能将值传递给 console.log(..)。相比之下，例如： a = 2; 这里对 a 的引用则是 LHS 引用，因为实际上我们并不关心当前的值是什么，只是想要为 = 2 这个赋值操作找到一个目标。 ***书中的总结———— LHS 和 RHS 的含义是“赋值操作的左侧或右侧”并不一定意味着就是“= 赋值操作符的左侧或右侧”。赋值操作还有其他几种形式，因此在概念上最 好将其理解为“赋值操作的目标是谁（LHS）”以及“谁是赋值操作的源头 （RHS）”。]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[ECMscript新特新]]></title>
     <url>%2F2021%2F02%2F09%2FECMscript%E6%96%B0%E7%89%B9%E6%96%B0%2F</url>
-    <content type="text"><![CDATA[关于ECMscript和JavaScript的关系ECMscript也是一门脚本语言，简称ES，通常看作是JavaScript的标准化规范，但实际上JavaScript是ES的扩展语言，ES只提供了基本的语法1.在浏览器环境中JavaScript=ES+webApi (WEBAPI=DOM+BOM)2.在Node环境中JavaScript=ES+NodeApi (nodeAPI=fs+net+etc.) 安装nodemon在向下学习之前我们安装一下nodemon，这样会方便一些1npm install nodemon -g 执行下nodemon -v出现版本号证明安装成功 执行nodemon 你的文件名.js就启动了nodemon，可以自动监听到文件修改，执行该脚本 ES主要新特性-let与块级作用域1.let的出现为JavaScript提供了块级作用域123456if (true) &#123; var a = 0 let b = 1&#125;console.log(a) //0console.log(b) //ReferenceError: b is not defined 2.let申明的变量不可提升1234console.log(b) //undefinedconsole.log(a) //ReferenceError: Cannot access 'a' before initializationvar b = 11let a = 12]]></content>
+    <content type="text"><![CDATA[关于ECMscript和JavaScript的关系ECMscript也是一门脚本语言，简称ES，通常看作是JavaScript的标准化规范，但实际上JavaScript是ES的扩展语言，ES只提供了基本的语法1.在浏览器环境中JavaScript=ES+webApi (WEBAPI=DOM+BOM)2.在Node环境中JavaScript=ES+NodeApi (nodeAPI=fs+net+etc.) 安装nodemon在向下学习之前我们安装一下nodemon，这样会方便一些1npm install nodemon -g 执行下nodemon -v出现版本号证明安装成功 执行nodemon 你的文件名.js就启动了nodemon，可以自动监听到文件修改，执行该脚本 ES主要新特性-let与块级作用域1.let的出现为JavaScript提供了块级作用域123456if (true) &#123; var a = 0 let b = 1&#125;console.log(a) //0console.log(b) //ReferenceError: b is not defined 2.let申明的变量不可提升1234console.log(b) //undefinedconsole.log(a) //ReferenceError: Cannot access 'a' before initializationvar b = 11let a = 12 const 只读特性const和let的区别就是比let多了个只读特性，一旦被声明，将不允许被指向新的内存地址，但是可以修改它的属性成员const obj={}obj.name=”Jack” √obj=”joy” ×总结最佳实践：不用var，主用const，配合let 数组的解构]]></content>
   </entry>
   <entry>
     <title><![CDATA[尝试从0写出promise]]></title>

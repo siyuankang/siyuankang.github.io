@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.siykang.xyz/"/>
-  <updated>2021-02-09T06:01:24.402Z</updated>
+  <updated>2021-02-09T07:12:15.906Z</updated>
   <id>www.siykang.xyz/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>理解作用域(阅读【你不知道的JavaScript】书)</title>
+    <link href="www.siykang.xyz/2021/02/09/%E7%90%86%E8%A7%A3%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>www.siykang.xyz/2021/02/09/理解作用域/</id>
+    <published>2021-02-09T06:36:51.000Z</published>
+    <updated>2021-02-09T07:12:15.906Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>写在前面，这里的内容是我阅读书籍，根据书中的详细讲解，提出自己理解的地方，总结在这里，仅此目的而已，欢迎一起学习共勉。Thanks for [你不知道的JavaScript]</p><h3 id="三个重要概念"><a href="#三个重要概念" class="headerlink" title="三个重要概念"></a>三个重要概念</h3><p>引擎，编译器，作用域</p><p>引擎：从头到尾负责整个 JavaScript 程序的编译及执行过程。</p><p>编译器：引擎的好朋友之一，负责语法分析及代码生成等脏活累活。</p><p>作用域：引擎的另一位好朋友，负责收集并维护由所有声明的标识符（变量）组成的一系列查 询，并实施一套非常严格的规则，确定当前执行的代码对这些标识符的访问权限。</p><p>当你看见 var a = 2; 这段程序时，很可能认为这是一句声明。但我们的新朋友引擎却不这 么看。事实上，引擎认为这里有两个完全不同的声明，一个由编译器在编译时处理，另一 个则由引擎在运行时处理。<br><img src="/2021/02/09/理解作用域/base1.png" alt="书籍中的截图"></p><p>总结：变量的赋值操作会执行两个动作，首先编译器会在当前作用域中声明一个变量（如 果之前没有声明过），然后在运行时引擎会在作用域中查找该变量，如果能够找到就会对 它赋值。</p><h3 id="RHS查询和LHS查询"><a href="#RHS查询和LHS查询" class="headerlink" title="RHS查询和LHS查询"></a>RHS查询和LHS查询</h3><p>console.log( a ); 其中对 a 的引用是一个 RHS 引用，因为这里 a 并没有赋予任何值。相应地，需要查找并取 得 a 的值，这样才能将值传递给 console.log(..)。<br>相比之下，例如： a = 2; 这里对 a 的引用则是 LHS 引用，因为实际上我们并不关心当前的值是什么，只是想要为 = 2 这个赋值操作找到一个目标。</p><p>***书中的总结———— LHS 和 RHS 的含义是“赋值操作的左侧或右侧”并不一定意味着就是“= 赋值操作符的左侧或右侧”。赋值操作还有其他几种形式，因此在概念上最 好将其理解为“赋值操作的目标是谁（LHS）”以及“谁是赋值操作的源头 （RHS）”。</p><p><img src="/2021/02/09/理解作用域/base2.jpg" alt="书籍中的测试题"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ECMscript新特新</title>
     <link href="www.siykang.xyz/2021/02/09/ECMscript%E6%96%B0%E7%89%B9%E6%96%B0/"/>
     <id>www.siykang.xyz/2021/02/09/ECMscript新特新/</id>
     <published>2021-02-09T02:34:52.000Z</published>
-    <updated>2021-02-09T06:01:24.402Z</updated>
+    <updated>2021-02-09T06:39:09.004Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="关于ECMscript和JavaScript的关系"><a href="#关于ECMscript和JavaScript的关系" class="headerlink" title="关于ECMscript和JavaScript的关系"></a>关于ECMscript和JavaScript的关系</h3><p>ECMscript也是一门脚本语言，简称ES，通常看作是JavaScript的标准化规范，但实际上JavaScript是ES的扩展语言，ES只提供了基本的语法<br>1.在浏览器环境中JavaScript=ES+webApi    (WEBAPI=DOM+BOM)<br><img src="/2021/02/09/ECMscript新特新/ES1.png" alt="浏览器环境"><br>2.在Node环境中JavaScript=ES+NodeApi    (nodeAPI=fs+net+etc.)<br><img src="/2021/02/09/ECMscript新特新/ES2.png" alt="Node环境"></p><h3 id="安装nodemon"><a href="#安装nodemon" class="headerlink" title="安装nodemon"></a>安装nodemon</h3><p>在向下学习之前我们安装一下nodemon，这样会方便一些<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install nodemon -g</span><br></pre></td></tr></table></figure></p><p>执行下nodemon -v<br>出现版本号证明安装成功</p><p>执行nodemon 你的文件名.js<br>就启动了nodemon，可以自动监听到文件修改，执行该脚本<br><img src="/2021/02/09/ECMscript新特新/ES3.png" alt="效果图"></p><h3 id="ES主要新特性-let与块级作用域"><a href="#ES主要新特性-let与块级作用域" class="headerlink" title="ES主要新特性-let与块级作用域"></a>ES主要新特性-let与块级作用域</h3><p>1.let的出现为JavaScript提供了块级作用域<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    var a = 0</span><br><span class="line">    <span class="built_in">let</span> b = 1</span><br><span class="line">&#125;</span><br><span class="line">console.log(a) //0</span><br><span class="line">console.log(b) //ReferenceError: b is not defined</span><br></pre></td></tr></table></figure></p><p>2.let申明的变量不可提升<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(b) //undefined</span><br><span class="line">console.log(a) //ReferenceError: Cannot access <span class="string">'a'</span> before initialization</span><br><span class="line">var b = 11</span><br><span class="line"><span class="built_in">let</span> a = 12</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="关于ECMscript和JavaScript的关系"><a href="#关于ECMscript和JavaScript的关系" class="headerlink" title="关于ECMscript和JavaScript的关系"></a>关于ECMscript和JavaScript的关系</h3><p>ECMscript也是一门脚本语言，简称ES，通常看作是JavaScript的标准化规范，但实际上JavaScript是ES的扩展语言，ES只提供了基本的语法<br>1.在浏览器环境中JavaScript=ES+webApi    (WEBAPI=DOM+BOM)<br><img src="/2021/02/09/ECMscript新特新/ES1.png" alt="浏览器环境"><br>2.在Node环境中JavaScript=ES+NodeApi    (nodeAPI=fs+net+etc.)<br><img src="/2021/02/09/ECMscript新特新/ES2.png" alt="Node环境"></p><h3 id="安装nodemon"><a href="#安装nodemon" class="headerlink" title="安装nodemon"></a>安装nodemon</h3><p>在向下学习之前我们安装一下nodemon，这样会方便一些<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install nodemon -g</span><br></pre></td></tr></table></figure></p><p>执行下nodemon -v<br>出现版本号证明安装成功</p><p>执行nodemon 你的文件名.js<br>就启动了nodemon，可以自动监听到文件修改，执行该脚本<br><img src="/2021/02/09/ECMscript新特新/ES3.png" alt="效果图"></p><h3 id="ES主要新特性-let与块级作用域"><a href="#ES主要新特性-let与块级作用域" class="headerlink" title="ES主要新特性-let与块级作用域"></a>ES主要新特性-let与块级作用域</h3><p>1.let的出现为JavaScript提供了块级作用域<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    var a = 0</span><br><span class="line">    <span class="built_in">let</span> b = 1</span><br><span class="line">&#125;</span><br><span class="line">console.log(a) //0</span><br><span class="line">console.log(b) //ReferenceError: b is not defined</span><br></pre></td></tr></table></figure></p><p>2.let申明的变量不可提升<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(b) //undefined</span><br><span class="line">console.log(a) //ReferenceError: Cannot access <span class="string">'a'</span> before initialization</span><br><span class="line">var b = 11</span><br><span class="line"><span class="built_in">let</span> a = 12</span><br></pre></td></tr></table></figure></p><h3 id="const-只读特性"><a href="#const-只读特性" class="headerlink" title="const 只读特性"></a>const 只读特性</h3><p>const和let的区别就是比let多了个只读特性，一旦被声明，将不允许被指向新的内存地址，但是可以修改它的属性成员<br>const obj={}<br>obj.name=”Jack” √<br>obj=”joy”  ×<br>总结最佳实践：不用var，主用const，配合let</p><h3 id="数组的解构"><a href="#数组的解构" class="headerlink" title="数组的解构"></a>数组的解构</h3>]]></content>
     
     <summary type="html">
     
