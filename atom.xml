@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.siykang.xyz/"/>
-  <updated>2021-02-08T09:23:21.872Z</updated>
+  <updated>2021-02-09T02:55:57.291Z</updated>
   <id>www.siykang.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ECMscript新特新</title>
+    <link href="www.siykang.xyz/2021/02/09/ECMscript%E6%96%B0%E7%89%B9%E6%96%B0/"/>
+    <id>www.siykang.xyz/2021/02/09/ECMscript新特新/</id>
+    <published>2021-02-09T02:34:52.000Z</published>
+    <updated>2021-02-09T02:55:57.291Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="关于ECMscript和JavaScript的关系"><a href="#关于ECMscript和JavaScript的关系" class="headerlink" title="关于ECMscript和JavaScript的关系"></a>关于ECMscript和JavaScript的关系</h3><p>ECMscript也是一门脚本语言，简称ES，通常看作是JavaScript的标准化规范，但实际上JavaScript是ES的扩展语言，ES只提供了基本的语法<br>1.在浏览器环境中JavaScript=ES+webApi    (WEBAPI=DOM+BOM)<br><img src="/2021/02/09/ECMscript新特新/ES1.png" alt="浏览器环境"><br>2.在Node环境中JavaScript=ES+NodeApi    (nodeAPI=fs+net+etc.)<br><img src="/2021/02/09/ECMscript新特新/ES2.png" alt="Node环境"></p><h3 id="ES主要新特性"><a href="#ES主要新特性" class="headerlink" title="ES主要新特性"></a>ES主要新特性</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>尝试从0写出promise</title>
@@ -42,7 +63,7 @@
     <link href="www.siykang.xyz/2021/02/07/%E5%86%8D%E5%AD%A6%E5%89%8D%E7%AB%AF@lagou/"/>
     <id>www.siykang.xyz/2021/02/07/再学前端@lagou/</id>
     <published>2021-02-06T17:55:51.000Z</published>
-    <updated>2021-02-07T15:49:49.684Z</updated>
+    <updated>2021-02-09T02:34:03.080Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="事件循环eventloop"><a href="#事件循环eventloop" class="headerlink" title="事件循环eventloop"></a>事件循环eventloop</h3><p><img src="/2021/02/07/再学前端@lagou/eventloop.png" alt></p>]]></content>
     
