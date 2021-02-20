@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.siykang.xyz/"/>
-  <updated>2021-02-19T10:38:52.126Z</updated>
+  <updated>2021-02-20T01:43:27.608Z</updated>
   <id>www.siykang.xyz/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="www.siykang.xyz/2021/02/19/JavaScript%E4%BB%A3%E7%A0%81%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-jsBench%E4%BD%BF%E7%94%A8/"/>
     <id>www.siykang.xyz/2021/02/19/JavaScript代码性能测试工具-jsBench使用/</id>
     <published>2021-02-19T10:25:59.000Z</published>
-    <updated>2021-02-19T10:38:52.126Z</updated>
+    <updated>2021-02-20T01:43:27.608Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="JSBench"><a href="#JSBench" class="headerlink" title="JSBench"></a>JSBench</h3><p>在浏览器中搜索jsbench.me</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="JSBench"><a href="#JSBench" class="headerlink" title="JSBench"></a>JSBench</h3><p>在浏览器中搜索jsbench.me</p><h3 id="js性能优化的常见方案"><a href="#js性能优化的常见方案" class="headerlink" title="js性能优化的常见方案"></a>js性能优化的常见方案</h3><p>1.减少判断层级<br>2.判断作用域链查找层级<br>3.减少数据读取次数<br>4.减少循环体中活动<br>5.减少声明及语句数<br>7.减少全局变量的使用 </p>]]></content>
     
     <summary type="html">
     
