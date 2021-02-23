@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[this的理解]]></title>
+    <url>%2F2021%2F02%2F23%2Fthis%E7%9A%84%E7%90%86%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[this的全面解析4种绑定方式一、默认绑定二、隐式绑定三、显式绑定四、new绑定 判断this的绑定对象 由new调用？绑定到新创建的对象 由call或者apply(或者bind)调用？绑定到指定的对象。 由上下文调用？绑定到那个上下文。4.默认，在严格模式下绑定到undefined，否则绑定到全局对象箭头函数不会使用4条标准的规则，而是根据当前的词法作用域来决定this，箭头函数会继承外层函数调动的this绑定(无论this绑定到了什么)。 优先级]]></content>
+      <tags>
+        <tag>by《你不知道JavaScript》</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript代码性能测试工具---jsBench使用]]></title>
     <url>%2F2021%2F02%2F19%2FJavaScript%E4%BB%A3%E7%A0%81%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-jsBench%E4%BD%BF%E7%94%A8%2F</url>
-    <content type="text"><![CDATA[JSBench在浏览器中搜索jsbench.me js性能优化的常见方案1.减少判断层级2.判断作用域链查找层级3.减少数据读取次数4.减少循环体中活动5.减少声明及语句数7.减少全局变量的使用]]></content>
+    <content type="text"><![CDATA[js执行分析JSBench在浏览器中搜索jsbench.me js性能优化的常见方案1.减少判断层级2.判断作用域链查找层级3.减少数据读取次数4.减少循环体中活动5.减少声明及语句数7.减少全局变量的使用 采用事件委托委托父元素处理事件，减少内存的占用，减少事件的注册]]></content>
   </entry>
   <entry>
     <title><![CDATA[理解作用域(阅读【你不知道的JavaScript】书)]]></title>
