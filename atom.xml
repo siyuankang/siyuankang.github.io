@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.siykang.xyz/"/>
-  <updated>2021-02-23T01:59:47.375Z</updated>
+  <updated>2021-03-01T10:54:25.918Z</updated>
   <id>www.siykang.xyz/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端工程化学习</title>
+    <link href="www.siykang.xyz/2021/03/01/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    <id>www.siykang.xyz/2021/03/01/前端工程化学习/</id>
+    <published>2021-03-01T10:22:08.000Z</published>
+    <updated>2021-03-01T10:54:25.918Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="yeoman基础使用"><a href="#yeoman基础使用" class="headerlink" title="yeoman基础使用"></a>yeoman基础使用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm -g install yo      </span><br><span class="line">npm install -g generator-node</span><br></pre></td></tr></table></figure><p>新建一个文件夹my-module,执行<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yo node</span><br></pre></td></tr></table></figure></p><p>得到项目基础结构<br><img src="/2021/03/01/前端工程化学习/baseUse.png" alt="yeoman的基础使用"></p><h3 id="generator子集生成器：-sub-generator"><a href="#generator子集生成器：-sub-generator" class="headerlink" title="generator子集生成器： sub generator"></a>generator子集生成器： sub generator</h3><p>在不需要创建完整的项目结构或者只是想在已有项目上创建一些特定类型的文件的时候，可以尝试使用<br>sub generator<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yo node:cli</span><br></pre></td></tr></table></figure></p><h3 id="yeoman使用步骤"><a href="#yeoman使用步骤" class="headerlink" title="yeoman使用步骤"></a>yeoman使用步骤</h3><p><img src="/2021/03/01/前端工程化学习/useStep.png" alt="yeoman的使用步骤"></p><h3 id="自定义generator"><a href="#自定义generator" class="headerlink" title="自定义generator"></a>自定义generator</h3><p>创建generator本质就是创建一个npm模块<br><img src="/2021/03/01/前端工程化学习/custom.png" alt="自定义generator特定文件夹目录"></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.新建一个generator-sample文件夹准备node环境</span></span><br><span class="line"><span class="comment">//1.新建一个generators文件夹</span></span><br><span class="line"><span class="comment">//2.在generators文件夹中创建app文件夹</span></span><br><span class="line"><span class="comment">//3.在app中新建index.js</span></span><br><span class="line"><span class="keyword">const</span> Generator = <span class="built_in">require</span>(<span class="string">'yeoman-generator'</span>)</span><br><span class="line"><span class="built_in">module</span>.exports=<span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">Generator</span></span>&#123;</span><br><span class="line">  wirting()&#123;</span><br><span class="line">    <span class="keyword">this</span>.fs.write(<span class="keyword">this</span>.destinationPath(<span class="string">'temp.text'</span>),<span class="string">'自己想写的内容......'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>再执行npm link<br>在任意文件下打开终端执行 yo sample,这里sample就是我们的生成器的名字。</p><h3 id="根据模板创建文件"><a href="#根据模板创建文件" class="headerlink" title="根据模板创建文件"></a>根据模板创建文件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Generator = <span class="built_in">require</span>(<span class="string">'yeoman-generator'</span>)</span><br><span class="line"><span class="built_in">module</span>.exports=<span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">Generator</span></span>&#123;</span><br><span class="line">  wirting()&#123;</span><br><span class="line">    <span class="comment">//模板文件路径</span></span><br><span class="line">    <span class="keyword">const</span> tmpl= <span class="keyword">this</span>.tepmlatePath(<span class="string">'foo.txt'</span>)</span><br><span class="line">    <span class="comment">//输出目标路径</span></span><br><span class="line">    <span class="keyword">const</span> output = <span class="keyword">this</span>.destinationPath(<span class="string">'foo.txt'</span>)</span><br><span class="line">    <span class="comment">//模板数据上下文</span></span><br><span class="line">    <span class="keyword">const</span> context = &#123;<span class="attr">title</span>: <span class="string">'hello ssss'</span>,<span class="attr">success</span>: <span class="literal">false</span>&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.fs.copyTpl(tmpl,output,context)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="接收用户输入"><a href="#接收用户输入" class="headerlink" title="接收用户输入"></a>接收用户输入</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>this的理解</title>
@@ -128,7 +149,7 @@
     <link href="www.siykang.xyz/2021/02/07/%E5%86%8D%E5%AD%A6%E5%89%8D%E7%AB%AF@lagou/"/>
     <id>www.siykang.xyz/2021/02/07/再学前端@lagou/</id>
     <published>2021-02-06T17:55:51.000Z</published>
-    <updated>2021-02-09T02:34:03.080Z</updated>
+    <updated>2021-03-01T10:21:57.261Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="事件循环eventloop"><a href="#事件循环eventloop" class="headerlink" title="事件循环eventloop"></a>事件循环eventloop</h3><p><img src="/2021/02/07/再学前端@lagou/eventloop.png" alt></p>]]></content>
     
